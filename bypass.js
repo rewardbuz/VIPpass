@@ -1,1 +1,101 @@
-(function(n,f){const Y=N,e=n();while(!![]){try{const v=parseInt(Y(0x113))/0x1+-parseInt(Y(0x110))/0x2+parseInt(Y(0x121))/0x3*(-parseInt(Y(0x107))/0x4)+-parseInt(Y(0x117))/0x5+parseInt(Y(0x131))/0x6+-parseInt(Y(0x105))/0x7*(-parseInt(Y(0x10a))/0x8)+parseInt(Y(0x11c))/0x9*(-parseInt(Y(0x12a))/0xa);if(v===f)break;else e['push'](e['shift']());}catch(K){e['push'](e['shift']());}}}(M,0xeca58),(function(){const T=N,n=[T(0x122),T(0x10c),T(0x11e),T(0x109),T(0x124)],f=window[T(0x12f)][T(0x133)];let e=![];for(let K of n){if(f[T(0x12c)](K)){e=!![];break;}}const v=document[T(0x137)](T(0x140));v['style'][T(0x101)]='fixed',v[T(0x13f)]['top']='20px',v[T(0x13f)][T(0x108)]=T(0x10d),v[T(0x13f)][T(0x13c)]=T(0x142),v[T(0x13f)][T(0x13d)]=T(0x106),v[T(0x13f)][T(0x127)]=T(0x11d),v[T(0x13f)][T(0x11b)]=T(0x129),v[T(0x13f)][T(0x12e)]=T(0x136),v[T(0x13f)]['color']=T(0x11a),v[T(0x13f)]['boxShadow']=T(0x104),v['style'][T(0x10e)]=T(0x111),e?(v['style'][T(0x125)]=T(0x102),v[T(0x13b)]=T(0x135),document['body'][T(0x141)](v),setTimeout(()=>{const s=T;let G=![];const L=document[s(0x118)](s(0x126));if(L&&L[s(0x120)]('data-reward-url')){window[s(0x12f)][s(0x13a)]=L[s(0x120)](s(0x10b));return;}const H=document[s(0x118)](s(0x103));if(H)try{const l=atob(H['getAttribute'](s(0x132))),C=l[s(0x134)](/src=["']([^"']+)["']/);if(C&&C[0x1]){window[s(0x12f)]['href']=C[0x1];return;}}catch(A){}for(let i of document[s(0x143)]('script')){let q=i[s(0x13b)]['match'](/FINAL_VIDEO_LINK\s*=\s*["']([^"']+)["']/);if(q&&q[0x1]){window['location'][s(0x13a)]=q[0x1];return;}}document[s(0x143)]('button[disabled],\x20button.mat-mdc-button-disabled,\x20#file')['forEach'](h=>{const Q=s;h[Q(0x11f)](Q(0x138)),h['disabled']=![],h[Q(0x13e)][Q(0x128)]('mat-mdc-button-disabled','disabled'),h[Q(0x13f)][Q(0x12d)]='1',h[Q(0x13f)][Q(0x119)]='auto',h[Q(0x13f)][Q(0x139)]='pointer',G=!![];});const B=document[s(0x118)](s(0x10f));B&&(B[s(0x13f)][s(0x12b)]=s(0x130),G=!![]),G?v[s(0x13b)]='🔓\x20Protection\x20Disabled!\x20Click\x20\x22Get\x20Link\x22.':(v[s(0x13b)]=s(0x112),v[s(0x13f)][s(0x125)]=s(0x115)),setTimeout(()=>{const E=s;v[E(0x13f)][E(0x12d)]='0',setTimeout(()=>v[E(0x128)](),0x1f4);},0xfa0);},0x3e8)):(v['style']['backgroundColor']=T(0x114),v[T(0x13b)]=T(0x123),document[T(0x116)]['appendChild'](v),setTimeout(()=>{const J=T;v[J(0x13f)][J(0x12d)]='0',setTimeout(()=>v['remove'](),0x1f4);},0xfa0));}()));function N(n,f){n=n-0x101;const e=M();let v=e[n];return v;}function M(){const S=['right','rekonise.com','9535928HIUnAY','data-reward-url','animationhubbb.blogspot.com','20px','transition','#link-view','614676gBUjJv','opacity\x200.5s\x20ease','⚠️\x20Waiting\x20or\x20no\x20links\x20found!','1066326kIpjkK','#ff4c4c','#f39c12','body','5579095NmTQqO','querySelector','pointerEvents','#fff','fontFamily','63xxKTMv','9999999','unlockify.ink','removeAttribute','getAttribute','4450848MvFOuC','cinemx.lk','❌\x20VIP\x20Unlocker:\x20Not\x20Supported.<br><span\x20style=\x22font-size:12px;font-weight:normal;\x22>This\x20website\x20is\x20not\x20in\x20our\x20database.</span>','sub2unlock.me','backgroundColor','[data-reward-url]','zIndex','remove','Arial,\x20sans-serif','58550LNbHgi','display','includes','opacity','fontWeight','location','block','9952470vUEyum','data-em','hostname','match','✅\x20VIP\x20Unlocker:\x20Supported\x20Site!<br><span\x20style=\x22font-size:12px;font-weight:normal;\x22>Bypassing\x20protection...</span>','bold','createElement','disabled','cursor','href','innerHTML','padding','borderRadius','classList','style','div','appendChild','15px\x2025px','querySelectorAll','position','#00c564','a[data-em]','0\x205px\x2015px\x20rgba(0,0,0,0.4)','7PCuwQF','10px','4cvbgQR'];M=function(){return S;};return M();}
+(function(){
+    // 1. Supported Sites List (Broader match for variants)
+    const supportedSites = [
+        'cinemx.lk', 
+        'animationhubbb.blogspot.com', 
+        'unlockify.ink', 
+        'rekonise.com', 
+        'sub2unlock.me',
+        'sub2unlock',
+        'subtounlock'
+    ];
+    const currentHost = window.location.hostname;
+    
+    let isSupported = false;
+    for(let site of supportedSites) {
+        if(currentHost.includes(site)) {
+            isSupported = true;
+            break;
+        }
+    }
+
+    // 2. HTML Popup Box Eka Hadanawa (DOM Injection)
+    const popup = document.createElement('div');
+    popup.style.position = 'fixed';
+    popup.style.top = '20px';
+    popup.style.right = '20px';
+    popup.style.padding = '15px 25px';
+    popup.style.borderRadius = '10px';
+    popup.style.zIndex = '9999999';
+    popup.style.fontFamily = 'Arial, sans-serif';
+    popup.style.fontWeight = 'bold';
+    popup.style.color = '#fff';
+    popup.style.boxShadow = '0 5px 15px rgba(0,0,0,0.4)';
+    popup.style.transition = 'opacity 0.5s ease';
+
+    if(isSupported) {
+        popup.style.backgroundColor = '#00c564'; // Green for supported
+        popup.innerHTML = '✅ VIP Unlocker: Supported Site!<br><span style="font-size:12px;font-weight:normal;">Bypassing protection...</span>';
+        document.body.appendChild(popup);
+        
+        setTimeout(() => {
+            let bypassed = false;
+            
+            // Method 1: Unlockify
+            const u = document.querySelector('[data-reward-url]');
+            if(u && u.getAttribute('data-reward-url')){ window.location.href = u.getAttribute('data-reward-url'); return; }
+            
+            // Method 2: Cinemx
+            const c = document.querySelector('a[data-em]');
+            if(c){
+                try{
+                    const d = atob(c.getAttribute('data-em'));
+                    const m = d.match(/src=["']([^"']+)["']/);
+                    if(m && m[1]){ window.location.href = m[1]; return; }
+                } catch(e){}
+            }
+            
+            // Method 3: Animation Hub
+            for(let s of document.querySelectorAll('script')){
+                let m = s.innerHTML.match(/FINAL_VIDEO_LINK\s*=\s*["']([^"']+)["']/);
+                if(m && m[1]){ window.location.href = m[1]; return; }
+            }
+            
+            // Method 4: Rekonise & Sub2Unlock / Force Enable Buttons
+            document.querySelectorAll('button[disabled], button.mat-mdc-button-disabled, .disabled, #file').forEach(btn => {
+                btn.removeAttribute('disabled'); 
+                btn.disabled = false; 
+                btn.classList.remove('mat-mdc-button-disabled', 'disabled');
+                btn.style.opacity = '1'; 
+                btn.style.pointerEvents = 'auto'; 
+                btn.style.cursor = 'pointer';
+                bypassed = true;
+            });
+
+            // Sub2Unlock hidden form display
+            const subForm = document.querySelector('#link-view');
+            if(subForm) {
+                subForm.style.display = 'block';
+                bypassed = true;
+            }
+            
+            if(bypassed) {
+                popup.innerHTML = '🔓 Protection Disabled! Click the button.';
+            } else {
+                popup.innerHTML = '⚠️ Waiting or no links found!';
+                popup.style.backgroundColor = '#f39c12';
+            }
+            
+            setTimeout(() => { popup.style.opacity = '0'; setTimeout(() => popup.remove(), 500); }, 4000);
+            
+        }, 1000);
+        
+    } else {
+        // Red for unsupported
+        popup.style.backgroundColor = '#ff4c4c';
+        popup.innerHTML = '❌ VIP Unlocker: Not Supported.<br><span style="font-size:12px;font-weight:normal;">This website is not in our database.</span>';
+        document.body.appendChild(popup);
+        
+        setTimeout(() => { popup.style.opacity = '0'; setTimeout(() => popup.remove(), 500); }, 4000);
+    }
+})();
